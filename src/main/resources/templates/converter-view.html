@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>${number}: <span th:text="${number}" ></span></li>  <!-- /* 단순한 형변환은 스프링이 제공하는 기능이라 컨버터를 적용하지 않아도 됨 */-->
+    <li>${{number}}: <span th:text="${{number}}" ></span></li> <!-- /* {}를 2개 쓰면 Converter 적용 */-->
+    <li>${ipPort}: <span th:text="${ipPort}" ></span></li>
+    <li>${{ipPort}}: <span th:text="${{ipPort}}" ></span></li>
+</ul>
+
+</body>
+</html>
